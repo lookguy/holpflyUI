@@ -15,6 +15,9 @@
   grid-template-rows: auto;
   grid-template-columns: 300px auto;
   min-height: 3rem;
+  position: relative;
+  z-index: 11;
+  background: white;
   .logo {
     font-size: 2.6rem;
   }

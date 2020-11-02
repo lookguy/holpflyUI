@@ -23,3 +23,19 @@ export default {
   },
 };
 </script>
+<style lang="scss" scoped>
+.content {
+  aside {
+    background: hotpink;
+    width: 15rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 4em;
+  }
+  main {
+    margin-left: 15rem;
+    padding: 2em;
+  }
+}
+</style>
