@@ -1,5 +1,5 @@
 <template>
-<div>
+  <div>
     <h1>怒号</h1>
-</div>
+  </div>
 </template>

@@ -1,18 +1,15 @@
 <template>
-<img alt="Vue logo" src="./assets/logo.png" />
-<HelloWorld msg="Hello Vue 3.0 + Vite" />
-<Zxb />
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <router-view />
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
-import Zxb from "./components/Zxb.vue";
 
 export default {
-    name: "App",
-    components: {
-        HelloWorld,
-        Zxb,
-    },
+  name: "App",
+  components: {
+    HelloWorld,
+  },
 };
 </script>
