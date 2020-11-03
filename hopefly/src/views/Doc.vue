@@ -4,14 +4,22 @@
     <div class="content">
       <aside v-if="menuVisible">
         <h2>组件列表</h2>
-        <ol>
-          <li>组件 Switch</li>
-          <li>组件 Button</li>
-          <li>组件 Dialog</li>
-          <li>组件 Tabs</li>
+        <ol class="doc-list">
+          <li>
+            <router-link to="/doc/switch-doc">组件 Switch</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/button-doc">组件 Button</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/dialog-doc">组件 Dialog</router-link>
+          </li>
+          <li><router-link to="/doc/tabs-doc">组件 Tabs</router-link></li>
         </ol>
       </aside>
-      <main>主内容</main>
+      <main>
+        <router-view />
+      </main>
     </div>
   </div>
 </template>
@@ -31,16 +39,38 @@ export default {
 <style lang="scss" scoped>
 .content {
   aside {
-    background: hotpink;
     width: 15rem;
     position: fixed;
     top: 0;
     left: 0;
-    padding-top: 4em;
+    height: 100vh;
+    padding: 4em 1em 1em 1em;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    box-shadow: 3px 0 10px 0 #cdcdcd;
+    .doc-list {
+      li {
+        padding: 0.4em 0;
+        box-sizing: border-box;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        > * {
+          text-decoration: none;
+          color: #333;
+        }
+      }
+    }
   }
   main {
+    padding: 1em 2em;
     margin-left: 15rem;
-    padding: 2em;
+  }
+  @media screen and (max-width: 750px) {
+    main {
+      margin-left: 0;
+      padding: 1em;
+    }
   }
 }
 </style>

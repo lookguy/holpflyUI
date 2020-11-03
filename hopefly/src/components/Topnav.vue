@@ -1,6 +1,7 @@
 <template>
   <div class="topNav">
-    <div class="logo" @click="toggleMenu">LOGO</div>
+    <span class="menu-icon" @click="toggleMenu">展开</span>
+    <div class="logo">LOGO</div>
     <ul class="menu">
       <li>导航111</li>
       <li>导航2</li>
@@ -23,14 +24,18 @@ export default {
 
 <style lang="scss" scoped>
 .topNav {
-  border: 1px solid red;
   display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: 300px auto;
-  min-height: 3rem;
+  grid-template-rows: 4rem;
+  grid-template-columns: 15em auto;
+  height: 4rem;
+  line-height: 4rem;
   position: relative;
   z-index: 11;
   background: white;
+  border-bottom: 1px solid rgb(165, 165, 165);
+  .menu-icon {
+    display: none;
+  }
   .logo {
     font-size: 2.6rem;
   }
@@ -38,9 +43,27 @@ export default {
     display: flex;
     justify-content: flex-end;
     box-sizing: border-box;
-    padding: 0 1rem;
-    > * {
-      padding: 0 2rem;
+    >li{
+      padding: 0 1em;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+    .menu-icon {
+      display: inline-block;
+      position: absolute;
+      left: 1em;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .logo {
+      border: 1px solid;
+      margin: 0 auto;
+    }
+    .menu {
+      display: none;
     }
   }
 }
