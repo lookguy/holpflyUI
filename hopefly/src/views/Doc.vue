@@ -41,6 +41,7 @@ export default {
   aside {
     width: 15rem;
     position: fixed;
+    z-index: 9;
     top: 0;
     left: 0;
     height: 100vh;
@@ -48,6 +49,7 @@ export default {
     overflow-y: scroll;
     box-sizing: border-box;
     box-shadow: 3px 0 10px 0 #cdcdcd;
+    background: white;
     .doc-list {
       li {
         padding: 0.4em 0;
@@ -65,6 +67,13 @@ export default {
   main {
     padding: 1em 2em;
     margin-left: 15rem;
+    position: absolute;
+    top: 4em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    background: white;
   }
   @media screen and (max-width: 750px) {
     main {
