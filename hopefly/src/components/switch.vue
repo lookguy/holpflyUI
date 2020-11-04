@@ -1,3 +1,12 @@
 <template>
-  <h1>SWITCH</h1>
+  <Switch />
 </template>
+
+<script lang="ts">
+import Switch from "../lib/Switch.vue";
+export default {
+  components: {
+    Switch,
+  },
+};
+</script>
