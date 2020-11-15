@@ -1,18 +1,29 @@
 <template>
   <div>Button 示例</div>
-  <h1>示例1</h1>
+  <h1>示例1-theme</h1>
   <div>
-    <Button>确认</Button>
-    <Button theme="button">确认</Button>
-    <Button theme="link">确认</Button>
-    <Button theme="text">确认</Button>
+    <Button>default</Button>
+    <Button theme="primary">primary</Button>
+    <Button theme="link">link</Button>
+    <Button theme="text">text</Button>
   </div>
-  <h1>示例2</h1>
+  <h1>示例2-size</h1>
   <div>
-    <Button>确认</Button>
-    <Button size="normal">确认</Button>
-    <Button size="large">确认</Button>
-    <Button size="small">确认</Button>
+    <Button size="small">small</Button>
+    <Button size="normal">normal</Button>
+    <Button size="large">large</Button>
+  </div>
+  <h1>示例3-ghost</h1>
+  <div style="background: #f2f1ef">
+    <Button theme="button" ghost>button</Button>
+    <Button theme="link" ghost>button</Button>
+    <Button theme="text" size="large" ghost>button</Button>
+  </div>
+  <h1>示例3-danger</h1>
+  <div style="background: #f2f1ef">
+    <Button theme="button" danger>button</Button>
+    <Button theme="link" danger>button</Button>
+    <Button theme="text" size="large" danger>button</Button>
   </div>
 </template>
 
