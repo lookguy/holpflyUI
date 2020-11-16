@@ -15,15 +15,28 @@
   </div>
   <h1>示例3-ghost</h1>
   <div style="background: #f2f1ef">
-    <Button theme="button" ghost>button</Button>
-    <Button theme="link" ghost>button</Button>
-    <Button theme="text" size="large" ghost>button</Button>
+    <Button theme="button" ghost>default</Button>
+    <Button theme="primary" ghost>primary</Button>
   </div>
   <h1>示例3-danger</h1>
-  <div style="background: #f2f1ef">
+  <div>
     <Button theme="button" danger>button</Button>
-    <Button theme="link" danger>button</Button>
-    <Button theme="text" size="large" danger>button</Button>
+    <Button theme="link" danger>link</Button>
+    <Button theme="primary" danger>primary</Button>
+  </div>
+  <h1>示例4-disabled</h1>
+  <div>
+    <Button theme="button" disabled>button</Button>
+    <Button theme="primary" danger disabled>primary danger</Button>
+    <Button theme="button" ghost disabled>button ghost</Button>
+  </div>
+  <h1>示例5-loading</h1>
+  <div>
+    <Button theme="primary" :loading="true">button</Button>
+    <Button :loading="true">button</Button>
+    <Button theme="primary" danger :loading="true">danger</Button>
+    <Button theme="button" danger :loading="true">button</Button>
+    <Button theme="primary" ghost :loading="true">primary</Button>
   </div>
 </template>
 
