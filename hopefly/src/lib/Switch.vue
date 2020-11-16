@@ -1,9 +1,10 @@
 <template>
   <button
     class="hopefly-switch"
-    :class="classes"
-    @click="toggle"
+    :class="classesSwitch"
     :disabled="disabled"
+    v-bind="rest"
+    @click="toggle"
   >
     <span></span>
   </button>
@@ -11,6 +12,7 @@
 <script lang="ts">
 import { computed, ref } from "vue";
 export default {
+  inheritAttrs: false,
   props: {
     value: Boolean,
     disabled: {
@@ -23,20 +25,21 @@ export default {
     },
   },
   setup(props, context) {
+    const {...rest} = context
     const toggle = () => {
       context.emit("update:value", !props.value);
     };
-    const classes = computed(() => {
+    const classesSwitch = computed(() => {
       return {
         [`hopefly-switch_${props.size}`]: props.size,
         checked: props.value,
       };
     });
-    return { toggle, classes };
+    return { toggle, classesSwitch,rest };
   },
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import "./config-color.scss";
 $h: 22px;
 $hs: 16px;
